@@ -8,7 +8,7 @@ export class ElasticInputDirective implements OnInit {
   mirror: HTMLElement;
   content: any;
 
-  @HostListener('input', ['$event.target'])
+  @HostListener('input', [])
   onInput(): void {
     this.update();
   }
