@@ -16,13 +16,13 @@ var ElasticInputDirective = /** @class */ (function () {
      * @return {?}
      */
     ElasticInputDirective.prototype.ngOnInit = function () {
-        this.wrapper = document.createElement('div');
-        this.wrapper.style.position = 'fixed';
-        this.wrapper.style.top = '-999px';
-        this.wrapper.style.left = '0';
+        this.wrapper = document.createElement("div");
+        this.wrapper.style.position = "fixed";
+        this.wrapper.style.top = "-999px";
+        this.wrapper.style.left = "0";
         document.body.appendChild(this.wrapper);
-        this.mirror = document.createElement('span');
-        this.mirror.style.whiteSpace = 'pre';
+        this.mirror = document.createElement("span");
+        this.mirror.style.whiteSpace = "pre";
         this.setMirrorStyle(this.mirror, this.element.nativeElement);
         this.wrapper.appendChild(this.mirror);
         this.update();
@@ -54,31 +54,31 @@ var ElasticInputDirective = /** @class */ (function () {
     ElasticInputDirective.prototype.setMirrorStyle = function (mirror, element) {
         var /** @type {?} */ style = window.getComputedStyle(element);
         [
-            'fontFamily',
-            'fontSize',
-            'fontWeight',
-            'fontStyle',
-            'letterSpacing',
-            'textTransform',
-            'wordSpacing'
+            "fontFamily",
+            "fontSize",
+            "fontWeight",
+            "fontStyle",
+            "letterSpacing",
+            "textTransform",
+            "wordSpacing",
         ].forEach(function (value) {
             mirror.style[value] = style[value];
         });
         mirror.style.paddingLeft = style.textIndent;
-        if (style.boxSizing === 'border-box') {
+        if (style.boxSizing === "border-box") {
             [
-                'paddingLeft',
-                'paddingRight',
-                'borderLeftStyle',
-                'borderLeftWidth',
-                'borderRightStyle',
-                'borderRightWidth'
+                "paddingLeft",
+                "paddingRight",
+                "borderLeftStyle",
+                "borderLeftWidth",
+                "borderRightStyle",
+                "borderRightWidth",
             ].forEach(function (value) {
                 mirror.style[value] = style[value];
             });
         }
-        else if (style.boxSizing === 'padding-box') {
-            ['paddingLeft', 'paddingRight'].forEach(function (value) {
+        else if (style.boxSizing === "padding-box") {
+            ["paddingLeft", "paddingRight"].forEach(function (value) {
                 mirror.style[value] = style[value];
             });
         }
@@ -103,7 +103,7 @@ var ElasticInputDirective = /** @class */ (function () {
 }());
 ElasticInputDirective.decorators = [
     { type: Directive, args: [{
-                selector: 'input[elastic-input]'
+                selector: "input[elastic-input]",
             },] },
 ];
 /**
@@ -113,7 +113,7 @@ ElasticInputDirective.ctorParameters = function () { return [
     { type: ElementRef, },
 ]; };
 ElasticInputDirective.propDecorators = {
-    'onInput': [{ type: HostListener, args: ['input', ['$event.target'],] },],
+    'onInput': [{ type: HostListener, args: ["input", ["$event.target"],] },],
 };
 var ElasticInputModule = /** @class */ (function () {
     function ElasticInputModule() {
