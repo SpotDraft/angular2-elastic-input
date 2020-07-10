@@ -1,4 +1,4 @@
-import { ElementRef, OnInit } from "@angular/core";
+import { ElementRef, OnInit } from '@angular/core';
 export declare class ElasticInputDirective implements OnInit {
     private element;
     wrapper: HTMLElement;

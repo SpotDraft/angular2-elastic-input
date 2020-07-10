@@ -317,14 +317,14 @@
         ElasticInputModule_1 = ElasticInputModule;
         ElasticInputModule.forRoot = function () {
             return {
-                ngModule: ElasticInputModule_1
+                ngModule: ElasticInputModule_1,
             };
         };
         var ElasticInputModule_1;
         ElasticInputModule = ElasticInputModule_1 = __decorate([
             core.NgModule({
                 declarations: [ElasticInputDirective],
-                exports: [ElasticInputDirective]
+                exports: [ElasticInputDirective],
             })
         ], ElasticInputModule);
         return ElasticInputModule;
